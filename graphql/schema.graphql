@@ -1,0 +1,20 @@
+type Comment {
+  id: ID!
+  text: String!
+  user: User!
+  createdAt: DateTime!
+}
+
+type User {
+  id: ID!
+  username: String!
+  comments: [Comment!]!
+}
+
+type Mutation {
+  createComment(text: String!): Comment!
+}
+
+type Query {
+  getComments: [Comment!]!
+}
