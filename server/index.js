@@ -1,6 +1,6 @@
 const { ApolloServer } = require("apollo-server");
 const mongoose = require("mongoose");
-
+//
 const typeDefs = require("./graphql/typeDefs");
 const resolvers = require("./graphql/resolvers");
 PORT = process.env.PORT || 8000;
@@ -13,7 +13,7 @@ const server = new ApolloServer({
   context: ({ req }) => ({ req }),
 });
 
-//connect to Mongo  DB
+//connect to Mongo DB
 
 mongoose //Added  useUnifiedTopology: true
   .connect(MONGODB, { useNewUrlParser: true, useUnifiedTopology: true })
