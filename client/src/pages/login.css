@@ -1,11 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('./dog.jpg.jpg'); /* Replace with your image file path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: Keeps the background fixed */
+  font-family: Arial, sans-serif;
+}
+
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(183, 12, 12, 0.2);
+}
   h3 {
     font-size: 24px;
     margin-bottom: 16px;
