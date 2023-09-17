@@ -5,6 +5,7 @@ import { useMutation } from "@apollo/react-hooks";
 import { TextField, Button, Container, Stack, Alert } from "@mui/material";
 import { gql } from "graphql-tag";
 import { useNavigate } from "react-router-dom";
+import "./login.css"; // Replace with the correct path to your CSS file
 
 const LOGIN_USER = gql`
   mutation login($loginInput: LoginInput) {
@@ -15,6 +16,7 @@ const LOGIN_USER = gql`
     }
   }
 `;
+
 function Login(props) {
   let navigate = useNavigate();
   const context = useContext(AuthContext);
@@ -29,7 +31,7 @@ function Login(props) {
     password: "",
   });
 
-  console.log(values, " hello these are the values i nmain form");
+  console.log(values, " hello these are the values in main form");
 
   const [loginUser] = useMutation(LOGIN_USER, {
     update(proxy, { data: { loginUser: userData } }) {
@@ -46,19 +48,26 @@ function Login(props) {
 
   return (
     <Container spacing={2} maxWidth="sm">
-      <h3>Login</h3>
-      <p>This is the login page, login below:</p>
-      <Stack spacing={2} paddingBottom={2}>
-        <TextField label="Email" name="email" onChange={onChange} />
-        <TextField label="Password" name="password" onChange={onChange} />
-      </Stack>
-      {errors.map(function (error) {
-        return <Alert severity="error">{error.message}</Alert>;
-      })}
-      <Button variant="contained" onClick={onSubmit}>
-        Login
-      </Button>
+      <div className="container">
+        <div className="form-container">
+          <h3>Login</h3>
+          <p>This is the login page, login below:</p>
+          <div className="form-group">
+            <TextField label="Email" name="email" onChange={onChange} />
+          </div>
+          <div className="form-group">
+            <TextField label="Password" name="password" onChange={onChange} />
+          </div>
+          {errors.map(function (error, index) {
+            return <div key={index} className="error-message">{error.message}</div>;
+          })}
+          <Button className="login-button" variant="contained" onClick={onSubmit}>
+            Login
+          </Button>
+        </div>
+      </div>
     </Container>
   );
 }
+
 export default Login;

@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('./dog.jpg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+}
+
+.Container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+  
+  h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .Stack {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .TextField {
+    margin-bottom: 15px;
+  }
+  
+  .Alert {
+    margin-top: 10px;
+  }
+  
+  .Button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .Button:hover {
+    background-color: #0056b3;
+  }
