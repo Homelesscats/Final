@@ -1,6 +1,6 @@
 const { gql } = require("apollo-server");
-// be advised, confirmPassword is being added as a field to the RegisterInput type
-module.exports = gql`
+
+const typeDefs = gql`
   type User {
     username: String
     email: String
@@ -30,4 +30,4 @@ module.exports = gql`
   }
 `;
 
-//took ! off (id: ID!)
+module.exports = typeDefs;

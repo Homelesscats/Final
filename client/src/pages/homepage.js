@@ -1,47 +1,49 @@
-import React, { useContext, useState } from "react"; // Import useState for managing the comment state
+import React, { useContext, useState } from "react";
 import { AuthContext } from "../context/authContext";
 import { Link } from "react-router-dom";
-import "./homepage.css"; // Import a CSS file for styling
-
+import "./homepage.css";
 
 function Homepage() {
   const { user } = useContext(AuthContext);
 
-  // State to store the user's comment
   const [comment, setComment] = useState("");
+  const [comments, setComments] = useState([]); // State to store submitted comments
 
-  // Function to handle changes in the comment input
   const handleCommentChange = (event) => {
     setComment(event.target.value);
   };
 
-  // Function to handle submitting the comment (you can customize this)
   const handleSubmitComment = () => {
-    // You can perform actions like sending the comment to a server/database here
-    console.log("Submitted Comment:", comment);
+    const newComment = {
+      text: comment,
+      id: comments.length + 1, // Generate a unique ID (you can use a library like uuid for this)
+    };
+
+    // Add the new comment to the state
+    setComments([...comments, newComment]);
+
     // Clear the comment input
     setComment("");
   };
 
-  // Define an array of links with images and descriptions
   const links = [
     {
       id: 1,
-      imageSrc: "/link1-image.jpg", // Replace with your image URL
+      imageSrc: "/link1-image.jpg",
       description: "Description for Link 1",
-      to: "/link1",
+      to: "https://buy.stripe.com/test_5kA5oq5JEbnw8485kl",
     },
     {
       id: 2,
-      imageSrc: "/link2-image.jpg", // Replace with your image URL
+      imageSrc: "/link2-image.jpg",
       description: "Description for Link 2",
-      to: "/link2",
+      to: "https://buy.stripe.com/test_8wMdUWega3V41FKcMO",
     },
     {
       id: 3,
-      imageSrc: "/link3-image.jpg", // Replace with your image URL
+      imageSrc: "/link3-image.jpg",
       description: "Description for Link 3",
-      to: "/link3",
+      to: "https://buy.stripe.com/test_4gweZ01to3V4cko8wz",
     },
   ];
 
@@ -50,29 +52,27 @@ function Homepage() {
       <div className="content">
         <h1>Welcome to the Homepage</h1>
         {user ? (
-          // If a user is logged in, display user information
           <>
             <h2>{user.email} is now logged in</h2>
           </>
         ) : null}
       </div>
 
-      {/* Background layout */}
       <div className="background-layout">
-        {/* Centered links with margin-top */}
         <div className="centered-links">
           {links.map((link) => (
             <div className="link" key={link.id}>
-              <Link to={link.to}>
-                <img src={link.imageSrc} alt={`Link ${link.id}`} />
-                <p>{link.description}</p>
-              </Link>
+              <div className="card">
+                <Link to={link.to}>
+                  <img src={link.imageSrc} alt={`Link ${link.id}`} />
+                  <p>{link.description}</p>
+                </Link>
+              </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Add CSS styles to position the comment box at the bottom */}
       <div className="comment-box">
         <textarea
           rows="4"
@@ -84,6 +84,15 @@ function Homepage() {
         <button onClick={handleSubmitComment} className="comment-button">
           Submit
         </button>
+      </div>
+
+      {/* Display submitted comments */}
+      <div className="comments-section">
+        {comments.map((comment) => (
+          <div key={comment.id} className="comment">
+            {comment.text}
+          </div>
+        ))}
       </div>
     </div>
   );
