@@ -7,6 +7,7 @@ import { gql } from "graphql-tag";
 import { useNavigate } from "react-router-dom";
 import "./register.css";
 import { Container } from "@mui/material";
+import { teal } from "@mui/material/colors";
 
 const REGISTER_USER = gql`
   mutation Mutation($registerInput: RegisterInput) {
@@ -53,17 +54,46 @@ function Register(props) {
   return (
     <Container className="Container" spacing={2} maxWidth="sm">
       <h2>Register</h2>
-      <h5>This is the register page, register below to create an account</h5>
+      <h5>Please register below to create an account</h5>
       <Stack className="Stack" spacing={2} paddingBottom={2}>
-        <TextField className="TextField" label="Username" name="username" onChange={onChange} />
-        <TextField className="TextField" label="Email" name="email" onChange={onChange} />
-        <TextField className="TextField" label="Password" name="password" onChange={onChange} />
-        <TextField className="TextField" label="Confirm password" name="confirmPassword" onChange={onChange} />
+        <TextField
+          className="TextField"
+          label="Username"
+          name="username"
+          onChange={onChange}
+        />
+        <TextField
+          className="TextField"
+          label="Email"
+          name="email"
+          onChange={onChange}
+        />
+        <TextField
+          className="TextField"
+          label="Password"
+          name="password"
+          onChange={onChange}
+        />
+        <TextField
+          className="TextField"
+          label="Confirm password"
+          name="confirmPassword"
+          onChange={onChange}
+        />
       </Stack>
       {errors.map(function (error) {
-        return <Alert className="Alert" severity="error">{error.message}</Alert>;
+        return (
+          <Alert className="Alert" severity="error">
+            {error.message}
+          </Alert>
+        );
       })}
-      <Button className="Button" variant="contained" onClick={onSubmit}>
+      <Button
+        sx={{ backgroundColor: "teal" }}
+        className="Button"
+        variant="contained"
+        onClick={onSubmit}
+      >
         Register
       </Button>
     </Container>

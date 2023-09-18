@@ -1,6 +1,6 @@
 /* Variables */
 :root {
-  --primary-color: #007bff;
+  --primary-color: #149c6c;
   --secondary-color: #777;
   --background-light: #f4f4f4;
   --background-dark: #f0f0f0;
@@ -16,13 +16,12 @@
   opacity: 85%;
 }
 
-h1, h3 {
+h1,
+h3 {
   color: white;
   weight: bold;
   margin: 10px;
-
 }
-
 
 .centered-links {
   text-align: center;
@@ -52,7 +51,6 @@ h1, h3 {
   height: 100px;
   align-items: flex-end; /* Align the comment box to the bottom of its container */
 }
-
 
 .comment-input {
   flex: 1;
