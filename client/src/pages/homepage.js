@@ -34,19 +34,19 @@ const handleSubmitComment = () => {
   const links = [
     {
       id: 1,
-      imageSrc: "pages/beagle.jpg", // Update the image source for Link 1
+      img: "pages/beagle.jpg", // Update the image source for Link 1
       description: "Description for Link 1",
       to: "https://buy.stripe.com/test_5kA5oq5JEbnw8485kl",
     },
     {
       id: 2,
-      imageSrc: "happ1.jpg", // Update the image source for Link 2
+      imgc: "happ1.jpg", // Update the image source for Link 2
       description: "Description for Link 2",
       to: "https://buy.stripe.com/test_8wMdUWega3V41FKcMO",
     },
     {
       id: 3,
-      imageSrc: "pom.jpg", // Update the image source for Link 3
+      img: "pom.jpg", // Update the image source for Link 3
       description: "Description for Link 3",
       to: "https://buy.stripe.com/test_4gweZ01to3V4cko8wz",
     },
@@ -55,12 +55,11 @@ const handleSubmitComment = () => {
   return (
     <div className="homepage-container">
       <div className="content">
-        <h1>Welcome to the Homepage</h1>
-        {user ? (
-          <>
-            <h2>{user.email} is now logged in</h2>
-          </>
-        ) : null}
+        <h1>Welcome to the Animal Liberation League {user.email}!</h1>
+        <h3>
+    Our mission at the Animal Liberation League is to empower compassionate individuals to make a positive impact on the lives of animals in need. We provide a central hub connecting supporters with organizations like the Beagle Freedom Project, OC Pom Rescue, and Friends of Orange County's Homeless Pets. Through awareness, support, and collaboration, we strive to bring freedom, safety, and happiness to animals, one rescue, one adoption, and one act of kindness at a time.
+  </h3>
+
       </div>
 
       <div className="background-layout">
@@ -69,7 +68,7 @@ const handleSubmitComment = () => {
             <div className="link" key={link.id}>
               <div className="card">
                 <Link to={link.to}>
-                  <img src={link.imageSrc} alt={`Link ${link.id}`} />
+                  <img src={link.img} alt={`Link ${link.id}`} />
                   <p>{link.description}</p>
                 </Link>
               </div>

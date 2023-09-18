@@ -13,6 +13,14 @@
   border-radius: 10px;
   max-height: 500px; /* Adjust this value as needed */
   overflow-y: auto; /* Enable vertical scrolling when content overflows */
+  opacity: 90%;
+}
+
+h1, h3 {
+  color: white;
+  weight: bold;
+  margin: 10px;
+
 }
 
 
