@@ -41,19 +41,19 @@ function Homepage() {
     {
       id: 1,
       img: imageSources[0], // Update the image source for Link 1
-      description: "Description for Link 1",
+      description: "Your donation supports the Beagle Freedom Project's mission: rescuing beagles from extensive animal testing and finding them caring homes.",
       to: "https://buy.stripe.com/test_5kA5oq5JEbnw8485kl",
     },
     {
       id: 2,
       img: imageSources[1], // Update the image source for Link 2
-      description: "Description for Link 2",
+      description: "Your donation helps us find forever homes for homeless pets.",
       to: "https://buy.stripe.com/test_8wMdUWega3V41FKcMO",
     },
     {
       id: 3,
       img: imageSources[2], // Update the image source for Link 3
-      description: "Description for Link 3",
+      description: "Your donation to OC Pom Rescue, a female-led, foster-based Pomeranian rescue in Southern California, helps make adoption positive and accessible while promoting responsible ownership.",
       to: "https://buy.stripe.com/test_4gweZ01to3V4cko8wz",
     },
   ];
