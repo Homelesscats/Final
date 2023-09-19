@@ -62,6 +62,8 @@ function Homepage() {
           to animals, one rescue, one adoption, and one act of kindness at a
           time.
         </h3>
+        <h5>Kindly select one of the links below to visit remarkable organizations dedicated to rescuing animals from homelessness or animal testing. Feel free to share your thoughts, stories, or information related to our beloved furry companions by leaving a comment below. We value your contributions!</h5>
+       
       </div>
       <div>
         <div className="centered-links">
