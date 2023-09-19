@@ -7,7 +7,7 @@ import { gql } from "graphql-tag";
 import { useNavigate } from "react-router-dom";
 import "./register.css";
 import { Container } from "@mui/material";
-import { teal } from "@mui/material/colors";
+
 
 const REGISTER_USER = gql`
   mutation Mutation($registerInput: RegisterInput) {
@@ -89,7 +89,6 @@ function Register(props) {
         );
       })}
       <Button
-        sx={{ backgroundColor: "teal" }}
         className="Button"
         variant="contained"
         onClick={onSubmit}

@@ -9,7 +9,7 @@ import "./login.css"; // Replace with the correct path to your CSS file
 // eslint-disable-next-line
 //import { teal } from "@mui/material/colors";
 // eslint-disable-next-line
-const teal = require("@mui/material/colors").teal;
+
 
 const LOGIN_USER = gql`
   mutation login($loginInput: LoginInput) {
@@ -70,7 +70,6 @@ function Login(props) {
             );
           })}
           <Button
-            sx={{ backgroundColor: "teal" }}
             className="login-button"
             variant="contained"
             onClick={onSubmit}
