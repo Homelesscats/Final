@@ -18,10 +18,28 @@
 
 h1, h3 {
   color: white;
-  weight: bold;
+  font-weight: bold;
   margin: 10px;
 
 }
+
+/* CSS for fixed image size */
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px; 
+
+}
+
+.image-container img {
+  width: 300px; /* Adjust the width as needed */
+  height: 50px; /* Adjust the height as needed */
+  
+}
+
 
 
 .centered-links {
@@ -29,7 +47,6 @@ h1, h3 {
   margin-top: 200px;
 }
 
-/* Comments Section */
 /* Comments Section */
 .comment-container {
   position: fixed; /* Change from "absolute" to "fixed" */
@@ -92,8 +109,9 @@ h1, h3 {
 }
 
 .link img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  border: 1px solid #ccc;
 }
 
 .link p {
