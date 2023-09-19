@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('./dog.jpg.jpg'); /* Replace with your image file path */
+  background-image: url("./dog.jpg.jpg"); /* Replace with your image file path */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed; /* Optional: Keeps the background fixed */
@@ -15,59 +15,59 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(183, 12, 12, 0.2);
 }
-  h3 {
-    font-size: 24px;
-    margin-bottom: 16px;
-  }
-  
-  p {
-    font-size: 16px;
-    margin-bottom: 24px;
-  }
-  
-  .form-container {
-    background-color: #ffffff;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 16px;
-  }
-  
-  label {
-    font-size: 16px;
-    margin-bottom: 8px;
-  }
-  
-  .input-field {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  .error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 8px;
-  }
-  
-  .login-button {
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .login-button:hover {
-    background-color: #0056b3;
-  }
+h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.login-button {
+  background-color: teal;
+  color: #fff;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #006d6d;
+}

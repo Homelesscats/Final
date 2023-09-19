@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
+import { teal } from "@mui/material/colors";
 
 function Navbar() {
   let navigate = useNavigate();
@@ -15,11 +16,11 @@ function Navbar() {
   console.log(user);
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ backgroundColor: "teal" }}>
         <Toolbar>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
             <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-              ReactLoginDemo
+              Animal Liberation League
             </Link>
           </Typography>
           <Box alignItems="right" sx={{ flexGrow: 1, textAlign: "right" }}>
@@ -44,7 +45,7 @@ function Navbar() {
                     marginRight: "10px",
                   }}
                 >
-                  ReactLogin{" "}
+                  Login{" "}
                 </Link>
                 <Link
                   to="/register"
