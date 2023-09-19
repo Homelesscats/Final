@@ -3,12 +3,16 @@ An easy to use Apollo Server authentication system using bcrypt and JWT, simply 
 
 ## Description
 
-Our website is a user-friendly and compassionate online platform dedicated to making a difference in the lives of animals in need. Our website is designed to connect animal lovers with non-profit animal shelters, providing an easy and effective way to donate and support these organizations that work tirelessly to rescue, rehabilitate, and find forever homes for animals.
+
+our website is a user-friendly and compassionate online platform dedicated to making a difference in the lives of animals in need. Our website is designed to connect animal lovers with non-profit animal shelters, providing an easy and effective way to donate and support these organizations that work tirelessly to rescue, rehabilitate, and find forever homes for animals.
+
 
 
 ## Motivation for Development 
 
-Developing a donation website for non-profit animal shelters can bring a positive change in the world while offering personal satisfaction and growth. Dedication to this cause can help improve the lives of countless animals and inspire others to do the same.
+
+developing a donation website for non-profit animal shelters can bring a positive change in the world while offering personal satisfaction and growth. Dedication to this cause can help improve the lives of countless animals and inspire others to do the same.
+
 
 
 ## User Story 
@@ -17,15 +21,12 @@ We wanted to create a user-friendly non-profit donation website for animal shelt
 
 
 
-![Alt text](assets/Screenshot%202023-09-18%20at%209.18.57%20PM.png)
 
-![Alt text](assets/Screenshot%202023-09-18%20at%209.19.13%20PM.png)
-
+![Alt text](/assets/img1.png)
 
 
-## License & Copyright ©
+## License & Copyright
   
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [Open Source Initiative Link](https://opensource.org/licenses/MIT)
 
 ### Copyright © 2023 Gilbert Perez, Luis Rosado, Robert Nguyen, Jason Rich, Juan Apatiga
 ```md
@@ -60,6 +61,4 @@ SOFTWARE.
 Encourage partnerships between shelters and local businesses for funding and resources.
 
 * Support for Pet Owners in Crisis: Establish programs to help pet owners facing financial or housing crises keep their pets, preventing surrenders due to temporary difficulties.
-
-
 
