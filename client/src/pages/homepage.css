@@ -21,7 +21,7 @@
 
 
 h1, h3 {
-  color: white;
+  color: rgb(0, 0, 0);
   font-weight: bold;
 }
 
@@ -29,19 +29,16 @@ h1, h3 {
 /* CSS for fixed image size */
 .image-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px; 
-
+  flex-direction: column; /* Stack images vertically */
+  align-items: center; /* Center items horizontally */
+  margin-top: 20px;
 }
 
 .image-container img {
-  width: 300px; /* Adjust the width as needed */
-  height: 50px; /* Adjust the height as needed */
-  
+  max-width: 300px; /* Limit the image width */
+  height: auto; /* Maintain the aspect ratio */
 }
+
 
 /* Comments Section */
 .comment-container {
@@ -62,7 +59,7 @@ h1, h3 {
   text-align: center;
   display: flex;
   justify-content: space-between;
-  height: 100px;
+  height: 170px;
   align-items: flex-end; /* Align the comment box to the bottom of its container */
 }
 
@@ -87,16 +84,23 @@ h1, h3 {
 }
 
 .comments-section {
-  margin-top: 20px;
+  margin-top: 120px;
   max-height: 300px;
   overflow-y: auto;
   overflow-x: hidden;
 }
 
 /* Links Section */
+.centered-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 200px; /* Adjust the gap between items as needed */
+  margin-top: 20px;
+}
+
 .link {
-  display: inline-block;
-  margin: 20px;
   text-align: center;
   text-decoration: none;
   color: #333;
@@ -104,8 +108,8 @@ h1, h3 {
 }
 
 .link img {
-  width: 100%;
-  height: auto;
+  max-width: 100%; /* Limit the image width */
+  height: auto; /* Maintain the aspect ratio */
   border: 1px solid #ccc;
 }
 
