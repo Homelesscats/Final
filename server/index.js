@@ -4,7 +4,8 @@ const mongoose = require("mongoose");
 const typeDefs = require("./graphql/typeDefs");
 const resolvers = require("./graphql/resolvers");
 const PORT = process.env.PORT || 8000;
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB =
+  "mongodb+srv://gilbertperezdt:n2ZTBdsua4tShlbU@jwtlogin.vvscfi0.mongodb.net/?retryWrites=true&w=majority";
 
 const server = new ApolloServer({
   typeDefs,
@@ -13,8 +14,11 @@ const server = new ApolloServer({
 });
 
 // Start the server
-server.listen({ port: PORT }).then(({ url }) => {
-  console.log(`Server running at ${url}`);
-}).catch((error) => {
-  console.error("Error starting the server:", error);
-});
+server
+  .listen({ port: PORT })
+  .then(({ url }) => {
+    console.log(`Server running at ${url}`);
+  })
+  .catch((error) => {
+    console.error("Error starting the server:", error);
+  });
